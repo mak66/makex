@@ -1,0 +1,14 @@
+{
+  "name": "makex",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . --ext js --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@types/chrome": "0.0.243",
+    "esbuild": "0.19.2"
+  },
+  "devDependencies": {}
+}
