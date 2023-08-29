@@ -2,10 +2,11 @@
 const saveOptions = () => {
     const sourceUrl = document.getElementById('sourceUrl').value;
     const isJSON = document.getElementById('isJSON').checked;
+    const toClipboard = document.getElementById('toClipboard').checked;
     const jsonField = document.getElementById('jsonField').value;
 
     chrome.storage.sync.set(
-        { sourceUrl, isJSON, jsonField },
+        { sourceUrl, isJSON, jsonField, toClipboard },
         () => {
             // Update status to let user know options were saved.
             const status = document.getElementById('status');
@@ -20,10 +21,11 @@ const saveOptions = () => {
 // Restores options stored in chrome.storage.
 const restoreOptions = () => {
     chrome.storage.sync.get(
-        ["sourceUrl", "isJSON", "jsonField"],
+        ["sourceUrl", "isJSON", "jsonField", "toClipboard"],
         (items) => {
             document.getElementById('sourceUrl').value = items.sourceUrl;
             document.getElementById('isJSON').checked = items.isJSON;
+            document.getElementById('toClipboard').checked = items.toClipboard;
             document.getElementById('jsonField').value = items.jsonField;
         }
     );

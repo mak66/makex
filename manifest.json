@@ -37,6 +37,14 @@
             "384": "images/android-chrome-384x384.png"
         }
     },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+B",
+                "mac": "Command+B"
+            }
+        }
+    },
     "permissions": [
         "scripting",
         "activeTab",

@@ -1,7 +1,7 @@
 chrome.action.onClicked.addListener(async (tab) => {
 
     chrome.storage.sync.get(
-        ["sourceUrl", "isJSON", "jsonField"],
+        ["sourceUrl", "isJSON", "jsonField", "toClipboard"],
         (items) => {
             chrome.tabs.query({ active: true, currentWindow: true }, async function (tabs) {
                 let response;
@@ -33,9 +33,10 @@ chrome.action.onClicked.addListener(async (tab) => {
                 }
                 chrome.tabs.sendMessage(tabs[0].id,
                     {
-                        message: "copyText",
+                        message: items.toClipboard ? "copyText" : "directText",
                         url: items.sourceUrl,
                         isJSON: items.isJSON,
+                        toClipboard: items.toClipboard,
                         jsonField: items.jsonField,
                         reponse: response.status,
                         textToCopy: result
