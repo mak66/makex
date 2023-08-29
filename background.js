@@ -11,7 +11,8 @@ chrome.action.onClicked.addListener(async (tab) => {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json;charset=utf-8'
-                        }
+                        },
+                        credentials: 'include',
                     });
 
                     let json = await response.json();
@@ -24,7 +25,8 @@ chrome.action.onClicked.addListener(async (tab) => {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/text;charset=utf-8'
-                        }
+                        },
+                        credentials: 'include',
                     });
 
                     result = await response.text();
