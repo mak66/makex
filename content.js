@@ -6,7 +6,6 @@ chrome.runtime.onMessage.addListener( // this is the message listener
         sendResponse();
     }
 );
-//console.log("running on page")
 
 async function copyToTheClipboard(textToCopy) {
     const el = document.createElement('textarea');
@@ -18,5 +17,4 @@ async function copyToTheClipboard(textToCopy) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    //console.log('textToCopy added to pasteboard', textToCopy)
 }

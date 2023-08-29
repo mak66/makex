@@ -2,24 +2,26 @@
 <html>
   <head>
     <title>Makex Options</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <label>
-      URL to fetch to pasteboard
-      <input type="text" name="source-url" id="sourceUrl" />
-    </label>
-    <label>
-      JSON
-      <input type="checkbox" name="isJSON" id="isJSON" />
-    </label>
-    <label>
-      JSON field
-      <input type="text" name="jsonField" id="jsonField" />
-    </label>
+    <div class="options">
+      <label>
+        URL to fetch to pasteboard
+        <input type="text" name="source-url" id="sourceUrl" />
+      </label>
+      <label>
+        JSON
+        <input type="checkbox" name="isJSON" id="isJSON" />
+      </label>
+      <label>
+        JSON field
+        <input type="text" name="jsonField" id="jsonField" />
+      </label>
 
-    <div id="status"></div>
-    <button id="save">Save</button>
-
+      <div id="status"></div>
+      <button id="save">Save</button>
+    </div>
     <script src="options.js"></script>
   </body>
 </html>
