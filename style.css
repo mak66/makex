@@ -1,0 +1,9 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#sourceUrl {
+  width: 60%;
+}

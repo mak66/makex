@@ -17,8 +17,7 @@ const saveOptions = () => {
     );
 };
 
-// Restores textbox state using the preferences
-// stored in chrome.storage.
+// Restores options stored in chrome.storage.
 const restoreOptions = () => {
     chrome.storage.sync.get(
         ["sourceUrl", "isJSON", "jsonField"],
